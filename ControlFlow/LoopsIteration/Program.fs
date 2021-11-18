@@ -14,6 +14,8 @@ let printOut stringInput =
     printfn $"{stringInput}"
     
 let arrayIter (argv : string[]) =
+    // Higher order functions
+    // (a func that takes one or more functions as arguments)
     Array.iter printOut argv
     
 

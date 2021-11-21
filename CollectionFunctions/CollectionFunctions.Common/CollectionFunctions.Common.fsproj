@@ -6,8 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Float.fs" />
         <Compile Include="Student.fs" />
         <Compile Include="StudentV2.fs" />
+        <Compile Include="Summary.fs" />
         <Compile Include="Quote.fs" />
     </ItemGroup>
 

@@ -32,7 +32,7 @@ module Program =
                             |> Array.skip 1
                             |> Array.map StudentV2.fromString
                             |> Array.sortBy (fun student -> student.Name)
-                            |> Array.iter StudentV2.printSummary
+                            |> Array.iter Summary.printSummaryV2
                     0
                 else
                     0

@@ -10,10 +10,6 @@ type Student =
     }
     
 module Student =
-    
-    let printSummary (student : Student) =
-        printfn $"Student {student.Name}; Mean : {student.MeanScore}; Max : {student.MaxScore}; Min : {student.MinScore}"
-        
     let getStudentsCount (studentFile:string[]) =
         studentFile |> Array.length
     

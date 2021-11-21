@@ -7,15 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Content Include=".dockerignore" />
+        <Content Include="Dockerfile" />
+        <Content Include="StudentScores.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Compile Include="Student.fs" />
         <Compile Include="Program.fs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include=".dockerignore" />
-      <Content Include="Dockerfile" />
-      <Content Include="StudentScores.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
 
 </Project>

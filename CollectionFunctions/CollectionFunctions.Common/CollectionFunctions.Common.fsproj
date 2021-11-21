@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Student.fs" />
+        <Compile Include="StudentV2.fs" />
+        <Compile Include="Quote.fs" />
+    </ItemGroup>
+
+</Project>

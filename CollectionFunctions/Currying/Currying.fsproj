@@ -9,9 +9,6 @@
     <ItemGroup>
         <Content Include=".dockerignore" />
         <Content Include="Dockerfile" />
-        <Content Include="StudentScores.txt">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
         <ProjectReference Include="..\CollectionFunctions.Common\CollectionFunctions.Common.fsproj" />
         <Compile Include="Program.fs" />
     </ItemGroup>

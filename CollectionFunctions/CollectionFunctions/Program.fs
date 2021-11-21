@@ -1,5 +1,7 @@
 namespace CollectionFunctions
 
+open CollectionFunctions.Common
+
 module Program =
     open System.IO
     let checkArgs (args:string[]) =

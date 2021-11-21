@@ -1,6 +1,4 @@
-﻿namespace CollectionFunctions
-
-open System.Collections.Generic
+﻿namespace CollectionFunctions.Common
 
 type Student =
     {
@@ -10,7 +8,7 @@ type Student =
         MinScore : float
         MaxScore : float
     }
-
+    
 module Student =
     
     let printSummary (student : Student) =
@@ -76,18 +74,3 @@ module Student =
             MaxScore = mapped |> Array.max
             MinScore = mapped |> Array.min
         }
-        
-        (*for studentString in inputString ->
-        (let studentElements = inputString.Split("\t")
-            let mapped =
-                studentElements
-                |> Array.skip 2
-                |> Array.map float
-            {
-                Name = studentElements.[0]
-                StudentId = studentElements.[1]
-                MeanScore = mapped |> Array.average
-                MaxScore = mapped |> Array.max
-                MinScore = mapped |> Array.min
-            })
-            ]*)

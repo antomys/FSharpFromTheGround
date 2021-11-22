@@ -25,7 +25,7 @@ module CollectionFunctionsAe =
                 printfn "--------------------------------"
                 
                 let _ =fileLines
-                    |> Array.map StudentV2.fromStringV3
+                    |> Array.map StudentV2.fromStringV4
                     |> Array.sortBy (fun student -> student.Name)
                     |> Array.iter Summary.printSummaryV2
                 0

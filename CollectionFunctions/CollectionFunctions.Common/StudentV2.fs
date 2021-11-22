@@ -3,7 +3,7 @@
 type StudentV2 =
     {
         Name : string
-        SurName : string
+        FirstName : string
         StudentId : string
         MeanScore : float
         MinScore : float
@@ -18,20 +18,31 @@ module StudentV2 =
         let elements = inputString.Split ','
         
         elements.[0].Trim(), elements.[1].Trim()
-    let nameParts (inputString : string) =
+    let namePartsVanilla (inputString : string) =
         let elements = inputString.Split ','
         
         match elements with
         | [|surname; firstName|] ->
             surname.Trim(), firstName.Trim()
+        | [|surname|] ->
+            surname.Trim(), None |> string
         | _ ->
             raise (System.FormatException $"Invalid format exception for {inputString}")
             
-    
+    let namePartsAnonymous (inputString : string) =
+        let elements = inputString.Split ','
+        
+        match elements with
+        | [|surname; firstName|] ->
+            {|Surname = surname; FirstName = firstName |}
+        | [|surname|] ->
+            {|Surname = surname; FirstName = None |> string |}
+        | _ ->
+            raise (System.FormatException $"Invalid format exception for {inputString}")
     
     let fromString (inputString : string) =
         let studentElements = inputString.Split("\t")
-        let studentName = studentElements.[0] |> nameParts
+        let studentName = studentElements.[0] |> namePartsVanilla
         let mapped =
             studentElements
             |> Array.skip 2
@@ -39,7 +50,7 @@ module StudentV2 =
         
         {
             Name = fst studentName
-            SurName = snd studentName
+            FirstName = snd studentName
             StudentId = studentElements.[1]
             MeanScore = mapped |> Array.average
             MaxScore = mapped |> Array.max
@@ -56,7 +67,7 @@ module StudentV2 =
         
         {
             Name = studentElements.[0]
-            SurName = ""
+            FirstName = ""
             StudentId = studentElements.[1]
             MeanScore = mapped |> Array.average
             MaxScore = mapped |> Array.max
@@ -83,7 +94,7 @@ module StudentV2 =
         
     let fromStringV4 (inputString : string) =
         let studentElements = inputString.Split("\t")
-        let studentName = studentElements.[0] |> nameParts
+        let studentName = studentElements.[0] |> namePartsAnonymous
         let mapped =
             studentElements
             |> Array.skip 2
@@ -92,8 +103,8 @@ module StudentV2 =
             |> Array.choose TestResult.tryEffectiveScoreV2
         
         {
-            Name = fst studentName
-            SurName = snd studentName
+            Name = studentName.Surname
+            FirstName = studentName.FirstName
             StudentId = studentElements.[1]
             MeanScore = mapped |> Array.average
             MaxScore = mapped |> Array.max

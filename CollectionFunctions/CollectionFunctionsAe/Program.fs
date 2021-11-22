@@ -17,14 +17,16 @@ module CollectionFunctionsAe =
                 printfn "Error reading. Exit"
                 0
             else
-                let _ =fileLines
+                let _ =
+                    fileLines
                     |> Array.map StudentV2.fromStringV2
                     |> Array.sortBy (fun student -> student.Name)
                     |> Array.iter Summary.printSummaryV2
                 
                 printfn "--------------------------------"
                 
-                let _ =fileLines
+                let _ =
+                    fileLines
                     |> Array.map StudentV2.fromStringV4
                     |> Array.sortBy (fun student -> student.Name)
                     |> Array.iter Summary.printSummaryV2

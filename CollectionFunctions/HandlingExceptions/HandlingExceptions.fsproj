@@ -9,11 +9,9 @@
     <ItemGroup>
         <Content Include=".dockerignore" />
         <Content Include="Dockerfile" />
-        <Content Include="StudentScoresNA.txt" />
+        <Content Include="StudentScoresAEFaulty.txt" />
         <Compile Include="Program.fs" />
-    </ItemGroup>
-    
-    <ItemGroup>
+        <Content Include="StudentScoresAllEs.txt" />
         <ProjectReference Include="..\CollectionFunctions\CollectionFunctions.fsproj" />
     </ItemGroup>
 

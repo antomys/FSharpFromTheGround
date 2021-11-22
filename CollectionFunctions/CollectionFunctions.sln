@@ -10,6 +10,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Currying", "Currying\Curryi
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CollectionFunctionsAe", "CollectionFunctionsAe\CollectionFunctionsAe.fsproj", "{0FAA866A-9427-4356-A44A-740B0B1AA30E}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HandlingExceptions", "HandlingExceptions\HandlingExceptions.fsproj", "{CA1BEC3D-88BA-42A1-8035-AB9EFAD87BB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{0FAA866A-9427-4356-A44A-740B0B1AA30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FAA866A-9427-4356-A44A-740B0B1AA30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FAA866A-9427-4356-A44A-740B0B1AA30E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1BEC3D-88BA-42A1-8035-AB9EFAD87BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1BEC3D-88BA-42A1-8035-AB9EFAD87BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1BEC3D-88BA-42A1-8035-AB9EFAD87BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1BEC3D-88BA-42A1-8035-AB9EFAD87BB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

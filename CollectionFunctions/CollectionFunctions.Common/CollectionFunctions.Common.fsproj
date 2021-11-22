@@ -6,11 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Quote.fs" />
         <Compile Include="Float.fs" />
+        <Compile Include="TestResult.fs" />
         <Compile Include="Student.fs" />
         <Compile Include="StudentV2.fs" />
         <Compile Include="Summary.fs" />
-        <Compile Include="Quote.fs" />
+        <Compile Include="FileService.fs" />
     </ItemGroup>
 
 </Project>

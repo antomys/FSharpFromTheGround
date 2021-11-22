@@ -5,27 +5,12 @@ open CollectionFunctions.Common
 
 module Program =
      
-     let checkArgs (args:string[]) =
-        args.Length <= 0
-     
-     let doesFileExist filePath =
-        let isExist = File.Exists filePath
-        
-        if isExist then
-            printfn $"File {filePath} exists! Proceeding." 
-        else
-            printfn $"File {filePath} not found"
-        
-        isExist
-     
-     
-       
      [<EntryPoint>]
      let main args =
-            if args |> checkArgs = false then
+            if args |> FileService.checkArgs = false then
                 printfn($"Processing file {args.[0]}")
                 
-                if doesFileExist args.[0] then
+                if FileService.doesFileExist args.[0] then
 
                     let _ = args.[0]
                             |> File.ReadAllLines

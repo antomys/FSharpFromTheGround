@@ -24,6 +24,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CollectionFunctions2", "Col
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ArrayCreation", "ArrayCreation\ArrayCreation.fsproj", "{21411344-25E9-4866-AA11-94E21A6E60A3}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequences", "Sequences\Sequences.fsproj", "{D120B40C-BA61-406E-9279-C7C054AD614D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +80,9 @@ Global
 		{21411344-25E9-4866-AA11-94E21A6E60A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21411344-25E9-4866-AA11-94E21A6E60A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21411344-25E9-4866-AA11-94E21A6E60A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D120B40C-BA61-406E-9279-C7C054AD614D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D120B40C-BA61-406E-9279-C7C054AD614D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D120B40C-BA61-406E-9279-C7C054AD614D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D120B40C-BA61-406E-9279-C7C054AD614D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

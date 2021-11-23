@@ -19,4 +19,4 @@ module Optional =
     let get (_ : 'T) (tValue : Optional<'T>) =
          match tValue with
          | Something something -> something
-         | Nothing -> tValue
+         | Nothing -> null

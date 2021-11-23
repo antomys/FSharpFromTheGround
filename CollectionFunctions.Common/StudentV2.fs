@@ -86,6 +86,7 @@ module StudentV2 =
         
         {
             Name = studentElements.[0]
+            FirstName = ""
             StudentId = studentElements.[1]
             MeanScore = mapped |> Array.average
             MaxScore = mapped |> Array.max

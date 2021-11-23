@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include=".dockerignore" />
+      <Content Include="Dockerfile" />
+      <Content Include="StudentScores.txt" />
+      <Content Include="StudentScoresAE.txt" />
+      <Content Include="StudentScoresAllEs.txt" />
+      <Content Include="StudentScoresNA.txt" />
+      <Content Include="StudentScoresSchool.txt" />
+      <Content Include="SchoolCodes.txt" />
+      <Compile Include="SchoolCodes.fs" />
+      <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CollectionFunctions.Common\CollectionFunctions.Common.fsproj" />
+    </ItemGroup>
+
+</Project>

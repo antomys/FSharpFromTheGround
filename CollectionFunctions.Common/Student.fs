@@ -1,4 +1,5 @@
 ﻿namespace CollectionFunctions.Common
+(*
 
 type Student =
     {
@@ -69,4 +70,4 @@ module Student =
             MeanScore = mapped |> Array.average
             MaxScore = mapped |> Array.max
             MinScore = mapped |> Array.min
-        }
+        }*)

@@ -12,6 +12,7 @@
         <Compile Include="TestResult.fs" />
         <Compile Include="Student.fs" />
         <Compile Include="StudentV2.fs" />
+        <Compile Include="StudentV3.fs" />
         <Compile Include="Summary.fs" />
         <Compile Include="FileService.fs" />
     </ItemGroup>

@@ -1,6 +1,8 @@
 namespace Sequences
 
 open System
+open System.IO
+open CollectionFunctions.Common
 
 module Program =
     // Define a function to construct a message to print
@@ -9,8 +11,22 @@ module Program =
 
     //let declares (binds) a value or function)
     [<EntryPoint>]
-    let main _ =
+    let main args =
         
+        
+        printfn "PELLV2"
+        let _ = PellV2.startPellV2
+        
+        0
+        (*let squareSumV2 =
+            Seq.initInfinite (fun index ->
+                let x = index + 1
+                pown x 2 )
+            |> Seq.truncate 1000
+            |> Seq.sum
+       
+        printfn $"Seq Infinite : {squareSumV2}"     
+            
         let total =
             seq {for i in 1..1000 -> pown i 2}
             |> Seq.sum
@@ -46,4 +62,28 @@ module Program =
         bricks
         |> Seq.iter Brick.printConsole
         printfn "\n"
-        0 // return an integer exit code
+        
+        printfn "PELL"
+        let _ = Pell.startPell
+        
+        printfn "PELLV2"
+        let _ = PellV2.startPellV2
+        
+        if args |> FileService.checkArgs = false then
+            printfn($"Processing file {args.[0]}")
+            
+            if FileService.doesFileExist args.[0] then
+
+                let _ = args.[0]
+                        |> File.ReadLines
+                        |> Seq.cache
+                        |> Seq.skip 1
+                        |> Seq.map Student.fromString
+                        |> Seq.sortBy (fun student -> student.Name)
+                        |> Seq.iter Summary.printSummaryV1
+                0
+            else
+                0
+        else
+            printf("No args are assigned. Exit.")
+            0*)

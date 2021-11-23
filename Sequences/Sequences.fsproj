@@ -10,7 +10,13 @@
       <Content Include=".dockerignore" />
       <Content Include="Dockerfile" />
       <Compile Include="Bricks.fs" />
+      <Compile Include="PellV2.fs" />
+      <Compile Include="Pell.fs" />
       <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CollectionFunctions.Common\CollectionFunctions.Common.fsproj" />
     </ItemGroup>
 
 </Project>

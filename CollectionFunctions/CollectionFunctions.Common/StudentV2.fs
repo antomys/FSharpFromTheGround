@@ -46,7 +46,7 @@ module StudentV2 =
         let mapped =
             studentElements
             |> Array.skip 2
-            |> Array.map  (Float.fromStringOr50V3 50.0)
+            |> Array.map (Float.fromStringOr50V2 50)
         
         {
             Name = fst studentName
@@ -109,4 +109,4 @@ module StudentV2 =
             MeanScore = mapped |> Array.average
             MaxScore = mapped |> Array.max
             MinScore = mapped |> Array.min
-        }       
+        }

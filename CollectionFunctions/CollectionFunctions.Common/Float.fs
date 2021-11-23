@@ -3,27 +3,28 @@
 module Float=
     let tryFromString s =
         if s = "N/A" then
-            None
+            Nothing
         else
-            float s |> Some
+             float s
+             |> Something
    
-    let fromStringOr50 inputString =
+    (*let fromStringOr50 inputString =
         let result = inputString |> tryFromString
         
-        if result = None then
-            50.0
+        if result = Nothing then
+            Optional.defaultValue 50.0
         else
-            result.Value
+            result*)
 
     let fromStringOr50V3 floatDefault inputString =
         let result = inputString |> tryFromString
         
-        if result = None then
+        if result = Nothing then
             floatDefault
         else
-            result.Value
+            result
     
-    let fromStringOr50V2 inputString =
+    let fromStringOr50V2 defaultValue inputString =
         inputString
         |> tryFromString
-        |> Option.defaultValue 50.0
+        |> Optional.defaultValue 50.0

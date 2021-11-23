@@ -33,3 +33,10 @@ module TestResult =
         | Scored score -> score |> Some
         | Excused 
         | _ -> None
+    
+    let tryEffectiveScoreV2Custom (testResult : TestResult) =
+        match testResult with
+        | Absent -> 0.0 |> Something
+        | Scored score -> score |> Something
+        | Excused 
+        | _ -> Nothing        

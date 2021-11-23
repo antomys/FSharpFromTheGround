@@ -57,8 +57,23 @@ module Program =
         let groupedByColor =
             bricks
             |> Array.groupBy (fun b -> b.Color)
+            
+        let groupedByColorV2 =
+            bricks
+            |> Array.groupBy (fun b -> b.StudColumns * b.StudRows)
+            |> Array.sortBy fst
      
         groupedByColor
+        |> Array.iter (fun (studCount, bricks) ->
+            printfn $"{studCount}:"
+            bricks
+            |> Array.iter Brick.printConsole
+            printfn ""
+        )
+        printfn ""
+        
+        printfn "NEW SORTING"
+        groupedByColorV2
         |> Array.iter (fun (color, bricks) ->
             printfn $"%s{color.ToString()}:"
             bricks

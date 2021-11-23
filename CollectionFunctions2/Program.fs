@@ -1,13 +1,13 @@
 namespace CollectionFunctions2
 
 open System
+open CollectionFunctions
 
 module Program =
     [<EntryPoint>]
-    let main _ =
+    let main args =
 
         let bricks =
-
             [|
                 (3, 2, ConsoleColor.Yellow)
                 (4, 2, ConsoleColor.Green)
@@ -82,4 +82,5 @@ module Program =
         )
         printfn ""
 
+        let _ = args |> Students.runStudents
         0 

@@ -63,3 +63,79 @@ module StudentV3 =
             MaxScore = mapped |> Array.max
             MinScore = mapped |> Array.min
         }
+        
+    let fromStringV4TryGet (schoolCodes : IDictionary<int, string>) (inputString : string) =
+        let studentElements = inputString.Split("\t")
+        let studentName = studentElements.[0] |> namePartsAnonymous
+        let temp = studentElements.[2] |> int
+        let schoolName =
+            match schoolCodes.TryGetValue temp with
+            |true, name -> name
+            |false, _ -> "(Unknown)"
+            
+        let mapped =
+            studentElements
+            |> Array.skip 3
+            |> Array.map  TestResult.fromString
+            // None will be completely away!
+            |> Array.choose TestResult.tryEffectiveScoreV2
+        
+        {
+            Name = studentName.Surname
+            FirstName = studentName.FirstName
+            SchoolName = schoolName
+            StudentId = studentElements.[1]
+            MeanScore = mapped |> Array.average
+            MaxScore = mapped |> Array.max
+            MinScore = mapped |> Array.min
+        }
+        
+    let fromStringV4Map (schoolCodes : Map<_, _>) (inputString : string) =
+        let studentElements = inputString.Split("\t")
+        let studentName = studentElements.[0] |> namePartsAnonymous
+        let schoolName =
+            schoolCodes
+            |> Map.tryFind (studentElements.[2] |> int)
+            |> Option.defaultValue "(Unknown)"
+            
+        let mapped =
+            studentElements
+            |> Array.skip 3
+            |> Array.map  TestResult.fromString
+            // None will be completely away!
+            |> Array.choose TestResult.tryEffectiveScoreV2
+        
+        {
+            Name = studentName.Surname
+            FirstName = studentName.FirstName
+            SchoolName = schoolName
+            StudentId = studentElements.[1]
+            MeanScore = mapped |> Array.average
+            MaxScore = mapped |> Array.max
+            MinScore = mapped |> Array.min
+        }
+        
+    let fromStringV4MapGeneric (schoolCodes : Map<_, _>) (inputString : string) =
+        let studentElements = inputString.Split("\t")
+        let studentName = studentElements.[0] |> namePartsAnonymous
+        let schoolName =
+            schoolCodes
+            |> Map.tryFind studentElements.[2]
+            |> Option.defaultValue "(Unknown)"
+            
+        let mapped =
+            studentElements
+            |> Array.skip 3
+            |> Array.map  TestResult.fromString
+            // None will be completely away!
+            |> Array.choose TestResult.tryEffectiveScoreV2
+
+        {
+            Name = studentName.Surname
+            FirstName = studentName.FirstName
+            SchoolName = schoolName
+            StudentId = studentElements.[1]
+            MeanScore = mapped |> Array.average
+            MaxScore = mapped |> Array.max
+            MinScore = mapped |> Array.min
+        }

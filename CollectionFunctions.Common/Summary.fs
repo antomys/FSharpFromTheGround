@@ -15,10 +15,8 @@ module Summary =
             Mean : {student.MeanScore};
             Max : {student.MaxScore};
             Min : {student.MinScore}"
-(*
     let printSummaryV1 (student : Student) =
         printfn $"Student {student.Name}; Mean : {student.MeanScore}; Max : {student.MaxScore}; Min : {student.MinScore}"
-    *)
 
     let printGroupSummary (surname : string) (students : StudentV2[]) =
         printfn $"{surname.ToUpperInvariant()}"

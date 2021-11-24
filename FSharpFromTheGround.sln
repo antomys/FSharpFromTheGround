@@ -28,6 +28,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sequences", "Sequences\Sequ
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Lookups", "Lookups\Lookups.fsproj", "{86D8820D-F53D-4D7A-BF63-A5FAF8AE0479}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Oop", "Oop\Oop.fsproj", "{BE01DBD0-8602-4EFF-871F-D6250330FA2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,5 +92,9 @@ Global
 		{86D8820D-F53D-4D7A-BF63-A5FAF8AE0479}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86D8820D-F53D-4D7A-BF63-A5FAF8AE0479}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86D8820D-F53D-4D7A-BF63-A5FAF8AE0479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE01DBD0-8602-4EFF-871F-D6250330FA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE01DBD0-8602-4EFF-871F-D6250330FA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE01DBD0-8602-4EFF-871F-D6250330FA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE01DBD0-8602-4EFF-871F-D6250330FA2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
